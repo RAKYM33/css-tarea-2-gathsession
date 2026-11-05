@@ -1,0 +1,158 @@
+// ==========================================================================
+// Hero Section
+// ==========================================================================
+
+@use 'sass:color';
+@use 'variables' as *;
+
+.hero {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 85px 160px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 5;
+
+  &__content {
+    flex: 0 0 760px;
+    max-width: 760px;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: $color-white;
+    letter-spacing: -0.5px;
+  }
+
+  &__description {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-gray-muted;
+    max-width: 505px;
+    margin-top: 32px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 48px;
+  }
+
+  &__btn-primary {
+    width: 240px;
+    height: 60px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all $transition-default;
+    box-shadow: 0 4px 14px rgba($color-primary, 0.25);
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -6%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba($color-primary, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba($color-primary, 0.3);
+    }
+  }
+
+  &__link-more {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-white;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: color $transition-default;
+
+    span {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .arrow-icon {
+      width: 22px;
+      height: 10px;
+      transition: transform $transition-default;
+    }
+
+    &:hover {
+      color: color.adjust($color-primary, $lightness: 8%);
+
+      .arrow-icon {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  &__features {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 104px;
+  }
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: default;
+
+  &__icon-box {
+    width: 64px;
+    height: 64px;
+    background-color: $color-icon-box;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all $transition-default;
+
+    svg {
+      width: 34px;
+      height: 34px;
+      transition: transform $transition-fast;
+    }
+  }
+
+  &:hover &__icon-box {
+    background-color: $color-icon-box-hover;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    svg {
+      transform: scale(1.08);
+    }
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: $color-white;
+  }
+}

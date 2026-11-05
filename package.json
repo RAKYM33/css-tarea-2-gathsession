@@ -1,0 +1,15 @@
+{
+  "name": "css-tarea-entregable-2-gathsession",
+  "version": "1.0.0",
+  "description": "Tarea entregable 2 de CSS - Header y Hero de GathSession con SASS y HTML semántico",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "sass scss/main.scss css/style.css --no-source-map",
+    "watch:css": "sass --watch scss/main.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

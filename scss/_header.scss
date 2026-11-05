@@ -1,0 +1,82 @@
+// ==========================================================================
+// Header & Navigation
+// ==========================================================================
+
+@use 'variables' as *;
+
+.header {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 44px 160px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: $font-heading;
+  font-size: 32px;
+  font-weight: 700;
+  color: $color-white;
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: baseline;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__highlight {
+    color: $color-primary;
+  }
+
+  &__dot {
+    color: $color-primary;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-gray-text;
+    transition: color $transition-default;
+    display: inline-block;
+    padding-bottom: 12px;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    // Active link with underline pill
+    &--active {
+      color: $color-white;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 32px;
+        height: 4px;
+        background-color: $color-primary;
+        border-radius: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+// ==========================================================================
+// Avatar Cards Collage
+// ==========================================================================
+
+@use 'variables' as *;
+
+.visuals {
+  position: relative;
+  flex: 0 0 784px;
+  width: 784px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  // Background orbital lines container
+  &__orbits {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 1200px;
+    pointer-events: none;
+    z-index: 1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Card columns
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 240px;
+    position: relative;
+    z-index: 2;
+
+    &--center {
+      justify-content: center;
+    }
+  }
+}
+
+.avatar-card {
+  width: 240px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform $transition-default, box-shadow $transition-default;
+  will-change: transform;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform $transition-default;
+  }
+
+  // Shapes & Sizes
+  &--tall {
+    height: 509px;
+    border-radius: 120px;
+  }
+
+  &--square {
+    height: 240px;
+    border-radius: 80px;
+  }
+
+  // Color-specific styles and hover glows
+  &--purple {
+    background-color: $card-purple;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 36px rgba($card-purple, 0.45);
+    }
+  }
+
+  &--cyan {
+    background-color: $card-cyan;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 36px rgba($card-cyan, 0.45);
+    }
+  }
+
+  &--pink {
+    background-color: $card-pink;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 36px rgba($card-pink, 0.45);
+    }
+  }
+
+  &--orange {
+    background-color: $card-orange;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 36px rgba($card-orange, 0.45);
+    }
+  }
+
+  &--yellow {
+    background-color: $card-yellow;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 36px rgba($card-yellow, 0.45);
+    }
+  }
+
+  // Image subtle zoom on card hover
+  &:hover img {
+    transform: scale(1.03);
+  }
+}

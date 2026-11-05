@@ -1,0 +1,27 @@
+// ==========================================================================
+// Variables & Design Tokens - GathSession
+// ==========================================================================
+
+// Colors
+$color-bg: #2B2D38;
+$color-primary: #DB2A6B;
+$color-white: #FFFFFF;
+$color-gray-text: #ABABAB;
+$color-gray-muted: #9E9FA8;
+$color-icon-box: #383A44;
+$color-icon-box-hover: #464956;
+
+// Avatar Card Backgrounds
+$card-purple: #6E1FED;
+$card-cyan: #60D3D9;
+$card-pink: #DB2A6B;
+$card-orange: #FF7E29;
+$card-yellow: #F4B840;
+
+// Typography
+$font-heading: 'Merriweather', serif;
+$font-body: 'Poppins', sans-serif;
+
+// Transitions
+$transition-default: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: 0.2s ease;
